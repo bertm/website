@@ -124,7 +124,7 @@ on other systems use the links on the system menu or the desktop.</p>
 automatically connecting to other nodes (Strangers). However,
 if you know several people who are already using Freenet, you can
 enable high security mode and 
-<a href="http://127.0.0.1:8888/addfriend/&quot;">add them as Friends</a>.
+<a href="http://127.0.0.1:8888/addfriend/">add them as Friends</a>.
 so Freenet will only connect to them, making your usage of Freenet 
 almost undetectable, while still being able to access the rest of the
 network through their friends' friends etc. This will be slower unless 
@@ -236,7 +236,7 @@ mirrored installation is not difficult. Nothing in a Freenet installation
 cares about its host's IP address; it can't, or Freenet would fail on
 machines that get IP addresses from a DHCP pool.</p>
 <p>All you actually need to do is tell the system you've mirrored to that it
-should start the Freenet proxy daemon for you on boot. Do <tt>crontab -l</tt>
+should start the Freenet proxy daemon for you on boot. Do <code>crontab -l</code>
 on the source machine, find the line that is tagged "FREENET AUTOSTART" and
 add that to your crontab on the mirrored machine.</p>
 <p>However: each installation has a unique identity key generated at
