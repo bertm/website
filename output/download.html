@@ -398,7 +398,7 @@ jQuery('#chatlink').click(function(e) {
 
 <!-- Update the body padding to always match the height of the top navigation bar. -->
 <script type="text/javascript">
-jQuery(document).load(function() {
+(function(){
     var menu = jQuery('#menu-section');
     // Calculate the vertical margin/border around the static navbar (assume it is bottom-only)
     var margin = menu.outerHeight(true) - menu.innerHeight();
@@ -445,7 +445,7 @@ jQuery(document).load(function() {
         scrollToHash(window.location.hash)
     }
     onResize();
-    // Some browsers handle the hash before, some after .ready().
+    // Some browsers handle the hash before, some after reading past here.
     // As a workaround, update the scroll position right now, as well as
     // immediately after the browser is done processing.
     onHashChange();
@@ -453,7 +453,7 @@ jQuery(document).load(function() {
     jQuery(window).resize(onResize);
     jQuery(window).on('hashchange', onHashChange);
     jQuery('body').on('click', 'a', scrollToHash);
-})
+})()
 </script>
 </body>
 
