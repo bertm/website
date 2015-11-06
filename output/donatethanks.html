@@ -203,7 +203,7 @@ jQuery('#chatlink').click(function(e) {
                 // The target anchor exists, scroll to the right position
                 jQuery('html, body').scrollTop(target.offset().top - offset);
                 if (window.location.hash != href && history && 'pushState' in history) {
-                    history.pushState({}, document.title, window.location.pathname + href);
+                    //history.pushState({}, document.title, window.location.pathname + href);
                 }
                 return false;
             }
