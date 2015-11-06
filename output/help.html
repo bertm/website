@@ -1252,7 +1252,7 @@ jQuery('#chatlink').click(function(e) {
             if (target.length) {
                 // The target anchor exists, scroll to the right position
                 jQuery('html, body').scrollTop(target.offset().top - offset);
-                if (history && 'pushState' in history) {
+                if (window.location.hash != href && history && 'pushState' in history) {
                     history.pushState({}, document.title, window.location.pathname + href);
                     return false;
                 }
