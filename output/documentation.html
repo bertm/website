@@ -1098,7 +1098,9 @@ jQuery('#chatlink').click(function(e) {
     // Some browsers handle the hash before, some after reading past here.
     // As a workaround, update the scroll position right now, as well as
     // immediately after the browser is done processing.
-    onHashChange();
+    //onHashChange();
+    var hash = window.location.hash;
+    window.location.hash = "";
     window.setTimeout(onHashChange, 0);
     jQuery(window).resize(onResize);
     jQuery(window).on('hashchange', onHashChange);
