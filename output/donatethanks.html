@@ -166,7 +166,7 @@ jQuery('#chatlink').click(function(e) {
 
 <!-- Update the body padding to always match the height of the top navigation bar. -->
 <script type="text/javascript">
-jQuery(document).ready(function() {
+(function() {
     var menu = jQuery('#menu-section');
     // Calculate the vertical margin/border around the static navbar (assume it is bottom-only)
     var margin = menu.outerHeight(true) - menu.innerHeight();
@@ -224,7 +224,7 @@ jQuery(document).ready(function() {
     jQuery(window).resize(onResize);
     jQuery(window).on('hashchange', onHashChange);
     jQuery('body').on('click', 'a', scrollToHash);
-});
+})()
 </script>
 </body>
 
