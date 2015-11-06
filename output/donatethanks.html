@@ -204,8 +204,8 @@ jQuery('#chatlink').click(function(e) {
                 jQuery('html, body').scrollTop(target.offset().top - offset);
                 if (window.location.hash != href && history && 'pushState' in history) {
                     history.pushState({}, document.title, window.location.pathname + href);
-                    return false;
                 }
+                return false;
             }
         }
     };
