@@ -43,7 +43,7 @@
 <!-- FONT AWESOME ICONS STYLES -->
 <link href="assets/css/font-awesome.css" rel="stylesheet" />
 <!-- CUSTOM CSS -->
-<link href="assets/css/style-freenet-4.css" rel="stylesheet" />
+<link href="assets/css/style-freenet-7.css" rel="stylesheet" />
 <!-- SLICK CAROUSEL -->
 <!-- Kept in one directory instead of split to stay with upstream. -->
 <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
@@ -62,7 +62,7 @@
 
 
 <!--MENU SECTION START-->
-<div class="navbar navbar-inverse navbar-fixed-top" id="menu-section" >
+<div class="navbar navbar-inverse navbar-static-top" id="menu-section">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -74,7 +74,7 @@
             <div class="navbar-brand">
                 <a href="index.html">
                     <img src="assets/img/logo_65_49.png" style="height: 2em;" alt="Freenet rabbit logo"/>
-                    FREENET
+                    <span class="uppercase">Freenet</span>
                 </a>
             </div>
         </div>
@@ -82,19 +82,19 @@
         <!-- languages -->
         <div class="navbar-collapse collapse navbar-language">
             <ul class="nav navbar-nav navbar-nav-language navbar-right">
-                <li><a href="?language=en">EN</a></li><li><a href="?language=es">ES</a></li><li><a href="?language=fi">FI</a></li><li><a href="?language=fr">FR</a></li><li><a href="?language=hr">HR</a></li><li><a href="?language=it">IT</a></li><li><a href="?language=ja">JA</a></li><li><a href="?language=nl">NL</a></li><li><a href="?language=pt-br">PT-BR</a></li><li><a href="?language=ru">RU</a></li><li><a href="?language=zh-cn">ZH-CN</a></li>
+                <li><a href="?language=en" class="uppercase">en</a></li><li><a href="?language=es" class="uppercase">es</a></li><li><a href="?language=fi" class="uppercase">fi</a></li><li><a href="?language=fr" class="uppercase">fr</a></li><li><a href="?language=hr" class="uppercase">hr</a></li><li><a href="?language=it" class="uppercase">it</a></li><li><a href="?language=ja" class="uppercase">ja</a></li><li><a href="?language=nl" class="uppercase">nl</a></li><li><a href="?language=pt-br" class="uppercase">pt-br</a></li><li><a href="?language=ru" class="uppercase">ru</a></li><li><a href="?language=zh-cn" class="uppercase">zh-cn</a></li>
             </ul>
         </div>
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-nav-page navbar-right">
-                <li><a href="index.html#home">OVERVIEW</a></li><li><a href="download.html#note">DOWNLOAD</a></li><li><a href="#">ABOUT</a></li><li><a href="news.html#news">NEWS</a></li><li><a href="documentation.html#documentation-intro">DOCUMENTATION</a></li><li><a href="help.html#">HELP</a></li><li><a href="donate.html#donate">DONATE</a></li><li><a href="contribute.html#">CONTRIBUTE</a></li>
+                <li><a href="index.html#home" class="uppercase">Overview</a></li><li><a href="download.html#note" class="uppercase">Download</a></li><li><a href="#" class="uppercase">About</a></li><li><a href="news.html#news" class="uppercase">News</a></li><li><a href="documentation.html#documentation-intro" class="uppercase">Documentation</a></li><li><a href="help.html#" class="uppercase">Help</a></li><li><a href="donate.html#donate" class="uppercase">Donate</a></li><li><a href="contribute.html#" class="uppercase">Contribute</a></li>
             </ul>
         </div>
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#introduction">WHAT IS FREENET?</a></li><li><a href="#philosopy">THE PHILOSOPHY BEHIND FREENET</a></li><li><a href="#people">PEOPLE</a></li><li><a href="#papers">PAPERS</a></li>
+                <li><a href="#introduction" class="uppercase">What is Freenet?</a></li><li><a href="#philosopy" class="uppercase">The Philosophy behind Freenet</a></li><li><a href="#people" class="uppercase">People</a></li><li><a href="#papers" class="uppercase">Papers</a></li>
             </ul>
         </div>
     </div>
@@ -185,39 +185,30 @@ governments to block it, and does not rely on tunneling to the "free world".</p>
 <li><a href="#why_anonymity">But why is anonymity necessary?</a></li>
 <li><a href="#copyright">And what of copyright?</a></li>
 <li><a href="#reward">But how will artists be rewarded for their work without copyright?</a></li>
-<li><a href="#alternative">Alternatives to Copyright</a>
-<a class="anchor" name="disclaimer"></a></li>
-</ol>
-<h3>1. A Disclaimer</h3>
+<li><a href="#alternative">Alternatives to Copyright</a></li>
+</ol><a id="disclaimer"></a><h3>1. A Disclaimer</h3>
 <p>There are many reasons why people get involved in the Freenet Project. Some
 share the views outlined in this document; some share variations of these views,
 which are also served by what we are trying to achieve; and some just enjoy the
 technical challenge. These are the ideas which motivated me to architect the
 system in the first place, but not necessarily the views that everyone involved
-in the Freenet project holds.
-<a class="anchor" name="prior_reading"></a></p>
-<h3>2. Suggested prior reading</h3>
+in the Freenet project holds.</p><a id="prior_reading"></a><h3>2. Suggested prior reading</h3>
 <p>For this document to make sense, you should probably know what Freenet is. You
-can get a good overview from <a href="about.html#introduction">What is Freenet?</a>.
-<a class="anchor" name="free_flow_info"></a></p>
-<h3>3. The importance of the Free flow of information</h3>
+can get a good overview from <a href="about.html#introduction">What is Freenet?</a>.</p><a id="free_flow_info"></a><h3>3. The importance of the Free flow of information</h3>
 <p>Freedom of speech, in most western cultures, is generally considered to be one
 of the most important rights any individual might have. Why is the freedom to
 share ideas and opinions so important? There are several ways to answer this
-question.</p>
-<h4>3.1 Communication is what makes us human</h4>
+question.</p><h4>3.1 Communication is what makes us human</h4>
 <p>One of the most obvious differences between mankind and the rest of the animal
 kingdom is our ability to communicate sophisticated and abstract concepts. While
 we constantly discover that animal's communication ability is more sophisticated
 than previously assumed, it is unlikely that any other animal approaches our own
-level of ability in this area.</p>
-<h4>3.2 Knowledge is good</h4>
+level of ability in this area.</p><h4>3.2 Knowledge is good</h4>
 <p>Most people, given the option of knowing something and not knowing something,
 will choose to have more information rather than less. Wars have been won and
 lost over who was better-informed. This is because being better-informed allows
 us to make better decisions, and generally improve our ability to survive and be
-successful.</p>
-<h4>3.3 Democracy assumes a well informed population</h4>
+successful.</p><h4>3.3 Democracy assumes a well informed population</h4>
 <p>Many people today live under democratic governments, and those who don't,
 probably want to. Democracy is an answer to the question of how to create
 leaders, while preventing them from abusing that power. It achieves this by
@@ -226,9 +217,7 @@ yet the ability to vote does not necessarily mean that you live in a
 democratic country. For a population to regulate their government effectively
 it must know what their government is doing, they must be well informed. It
 is a feedback loop, but this loop can be broken if the government has the
-power to control the information the population has access to.
-<a class="anchor" name="censor_freedom"></a></p>
-<h3>4. Censorship and freedom</h3>
+power to control the information the population has access to.</p><a id="censor_freedom"></a><h3>4. Censorship and freedom</h3>
 <p>Everyone values their freedom, in fact, many consider it so important that
 they will die for it. People like to think that they are free to form and
 hold whatever opinions they like, particularly in western countries. Consider
@@ -239,16 +228,12 @@ contradicted those lies. This is not some Orwellian fiction, it is standard
 practice for most western governments to lie to their populations, so much
 so, that people now take it for granted, despite the fact that this
 undermines the very democratic principles which justify the government's
-existence in the first place.
-<a class="anchor" name="solution"></a></p>
-<h3>5. The solution</h3>
+existence in the first place.</p><a id="solution"></a><h3>5. The solution</h3>
 <p>The only way to ensure that a democracy will remain effective is to ensure
 that the government cannot control its population's ability to share
 information, to communicate. So long as everything we see and hear is
 filtered, we are not truly free. Freenet's aim is to allow two or more people
-who wish to share information, to do so.
-<a class="anchor" name="is_censorship_necessary"></a></p>
-<h3>6. Isn't censorship sometimes necessary?</h3>
+who wish to share information, to do so.</p><a id="is_censorship_necessary"></a><h3>6. Isn't censorship sometimes necessary?</h3>
 <p>Of course no issue is black and white, and there are many who feel that
 censorship is a good thing in some circumstances. For example, in some
 European countries propagating information deemed to be racist is illegal.
@@ -269,9 +254,7 @@ by racists, makes them vulnerable to those arguments when they do eventually
 encounter them.</p>
 <p>Of course the first argument is the stronger one, and would still hold-true
 even if you didn't accept the second. Basically, you either have censorship,
-or you don't. There is no middle-ground.
-<a class="anchor" name="why_anonymity"></a></p>
-<h3>7. But why is anonymity necessary?</h3>
+or you don't. There is no middle-ground.</p><a id="why_anonymity"></a><h3>7. But why is anonymity necessary?</h3>
 <p>You cannot have freedom of speech without the option to remain anonymous.
 Most censorship is retrospective, it is generally much easier to curtail free
 speech by punishing those who exercise it afterward, rather than preventing
@@ -280,9 +263,7 @@ remain anonymous. It is a common misconception that you cannot trust
 anonymous information. This is not necessarily true, using digital signatures
 people can create a secure anonymous pseudonym which, in time, people can
 learn to trust. Freenet incorporates a mechanism called "subspaces" to
-facilitate this.
-<a class="anchor" name="copyright"></a></p>
-<h3>8. And what of copyright?</h3>
+facilitate this.</p><a id="copyright"></a><h3>8. And what of copyright?</h3>
 <p>Of course much of Freenet's publicity has centered around the issue of
 copyright, and thus I will speak to it briefly. The core problem with
 copyright is that enforcement of it requires monitoring of communications,
@@ -293,9 +274,7 @@ when debating the issue of copyright, so let me make it clear:</p>
 <p><em>You cannot guarantee freedom of speech and enforce copyright law</em></p>
 </blockquote>
 <p>It is for this reason that Freenet, a system designed to protect Freedom of
-Speech, must prevent enforcement of copyright.
-<a class="anchor" name="reward"></a></p>
-<h3>9. But how will artists be rewarded for their work without copyright?</h3>
+Speech, must prevent enforcement of copyright.</p><a id="reward"></a><h3>9. But how will artists be rewarded for their work without copyright?</h3>
 <p>Firstly, even if copyright were the only way that artists could be rewarded
 for their work, then I would contend that freedom is more important than
 having professional artists (those who claim that we would have no art do not
@@ -306,9 +285,7 @@ music industry is one of the most vocally opposed to enhancements in
 communication technology, yet according to many of the artists who should be
 rewarded by copyright, it is failing to do so. Rather it has allowed
 middle-men to gain control over the mechanisms of distribution, to the
-detriment of both artists and the public.
-<a class="anchor" name="alternative"></a></p>
-<h3>10. Alternatives to Copyright</h3>
+detriment of both artists and the public.</p><a id="alternative"></a><h3>10. Alternatives to Copyright</h3>
 <p>Fortunately it won't come to this. There are many alternative ways to reward
 artists. The simplest is voluntary payment. This is an extension of the
 patronage system which was frequently used to reward artists prior to
@@ -482,7 +459,87 @@ forums such as FMS, or <a href="https://bugs.freenetproject.org/">the bug tracke
 <script src="assets/js/custom.js"></script>
 <!-- SLICK CAROUSEL -->
 <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+<!-- BOOTBOX -->
+<script type="text/javascript" src="assets/js/bootbox.min.js"></script>
 
+<!-- Chat link modal alert handler. This must go after jQuery is loaded, which restricts it to being in common. -->
+<script type="text/javascript">
+jQuery('#chatlink').click(function(e) {
+    bootbox.dialog({
+        message: "This chat is staffed by volunteers, and it may be that no one is around right now. Please ask your question, and someone will answer within several hours.",
+        title: "Please note",
+        buttons: {
+            main: {
+                label: "Open chat",
+                className: "btn-primary",
+                callback: function() {
+                    window.open("https://webchat.freenode.net/?randomnick=1&channels=freenet");
+                }
+            }
+        }
+    });
+});
+</script>
+
+<!-- Update the body padding to always match the height of the top navigation bar. -->
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var menu = jQuery('#menu-section');
+    // Calculate the vertical margin/border around the static navbar (assume it is bottom-only)
+    var margin = menu.outerHeight(true) - menu.innerHeight();
+    // Add the appropriate class and remove the fallback
+    menu.addClass('navbar-fixed-top');
+    menu.removeClass('navbar-static-top');
+    var offset = 0;
+    // Handler to account for the new navigation bar height if it changes due to wrapping
+    var onResize = function() {
+        var newOffset = menu.height() + margin;
+        if (newOffset != offset) {
+            offset = newOffset;
+            // Update body padding to match new navigation bar height
+            var body = jQuery('body');
+            body.css('padding-top', offset);
+            // Notify the Bootstrap Scrollspy of the new offset
+            body.attr('data-offset', offset);
+            var scrollspy = body.data('bs.scrollspy');
+            if (scrollspy) {
+                scrollspy.options.offset = offset;
+                scrollspy.refresh();
+            }
+        }
+    };
+    // Scroll to a hash on this page, correcting for navigation bar height
+    var scrollToHash = function(href) {
+        if (typeof(href) != 'string') {
+            href = jQuery(this).attr('href');
+        }
+        if (href.indexOf("#") == 0) {
+            // The url passed is a hash on this page
+            var target = jQuery(href);
+            if (target.length) {
+                // The target anchor exists, scroll to the right position
+                jQuery('html, body').scrollTop(target.offset().top - offset);
+                if (history && 'pushState' in history) {
+                    history.pushState({}, document.title, window.location.pathname + href);
+                    return false;
+                }
+            }
+        }
+    };
+    var onHashChange = function() {
+        scrollToHash(window.location.hash)
+    }
+    onResize();
+    // Some browsers handle the hash before, some after .ready().
+    // As a workaround, update the scroll position right now, as well as
+    // immediately after the browser is done processing.
+    onHashChange();
+    window.setTimeout(onHashChange, 0);
+    jQuery(window).resize(onResize);
+    jQuery(window).on('hashchange', onHashChange);
+    jQuery('body').on('click', 'a', scrollToHash);
+})
+</script>
 </body>
 
 </html>

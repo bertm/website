@@ -43,7 +43,7 @@
 <!-- FONT AWESOME ICONS STYLES -->
 <link href="assets/css/font-awesome.css" rel="stylesheet" />
 <!-- CUSTOM CSS -->
-<link href="assets/css/style-freenet-4.css" rel="stylesheet" />
+<link href="assets/css/style-freenet-7.css" rel="stylesheet" />
 <!-- SLICK CAROUSEL -->
 <!-- Kept in one directory instead of split to stay with upstream. -->
 <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
@@ -62,7 +62,7 @@
 
 
 <!--MENU SECTION START-->
-<div class="navbar navbar-inverse navbar-fixed-top" id="menu-section" >
+<div class="navbar navbar-inverse navbar-static-top" id="menu-section">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -74,7 +74,7 @@
             <div class="navbar-brand">
                 <a href="index.html">
                     <img src="assets/img/logo_65_49.png" style="height: 2em;" alt="Freenet rabbit logo"/>
-                    FREENET
+                    <span class="uppercase">Freenet</span>
                 </a>
             </div>
         </div>
@@ -82,19 +82,19 @@
         <!-- languages -->
         <div class="navbar-collapse collapse navbar-language">
             <ul class="nav navbar-nav navbar-nav-language navbar-right">
-                <li><a href="?language=en">EN</a></li><li><a href="?language=es">ES</a></li><li><a href="?language=fi">FI</a></li><li><a href="?language=fr">FR</a></li><li><a href="?language=hr">HR</a></li><li><a href="?language=it">IT</a></li><li><a href="?language=ja">JA</a></li><li><a href="?language=nl">NL</a></li><li><a href="?language=pt-br">PT-BR</a></li><li><a href="?language=ru">RU</a></li><li><a href="?language=zh-cn">ZH-CN</a></li>
+                <li><a href="?language=en" class="uppercase">en</a></li><li><a href="?language=es" class="uppercase">es</a></li><li><a href="?language=fi" class="uppercase">fi</a></li><li><a href="?language=fr" class="uppercase">fr</a></li><li><a href="?language=hr" class="uppercase">hr</a></li><li><a href="?language=it" class="uppercase">it</a></li><li><a href="?language=ja" class="uppercase">ja</a></li><li><a href="?language=nl" class="uppercase">nl</a></li><li><a href="?language=pt-br" class="uppercase">pt-br</a></li><li><a href="?language=ru" class="uppercase">ru</a></li><li><a href="?language=zh-cn" class="uppercase">zh-cn</a></li>
             </ul>
         </div>
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-nav-page navbar-right">
-                <li><a href="index.html#home">OVERVIEW</a></li><li><a href="download.html#note">DOWNLOAD</a></li><li><a href="about.html#">ABOUT</a></li><li><a href="news.html#news">NEWS</a></li><li><a href="documentation.html#documentation-intro">DOCUMENTATION</a></li><li><a href="help.html#">HELP</a></li><li><a href="#donate">DONATE</a></li><li><a href="contribute.html#">CONTRIBUTE</a></li>
+                <li><a href="index.html#home" class="uppercase">Overview</a></li><li><a href="download.html#note" class="uppercase">Download</a></li><li><a href="about.html#" class="uppercase">About</a></li><li><a href="news.html#news" class="uppercase">News</a></li><li><a href="documentation.html#documentation-intro" class="uppercase">Documentation</a></li><li><a href="help.html#" class="uppercase">Help</a></li><li><a href="#donate" class="uppercase">Donate</a></li><li><a href="contribute.html#" class="uppercase">Contribute</a></li>
             </ul>
         </div>
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#Sponsors">SPONSORS</a></li><li><a href="http://www.zazzle.com/freenetproject">STORE</a></li>
+                <li><a href="#Sponsors" class="uppercase">Sponsors</a></li><li><a href="http://www.zazzle.com/freenetproject" class="uppercase">Store</a></li>
             </ul>
         </div>
     </div>
@@ -115,7 +115,7 @@
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <h4>Financial Status</h4>
-<p>The project's current balance is <strong>$MONEYBALANCE</strong>. (updated twice a day)
+<p>The project's current balance is <strong>$MONEYBALANCE</strong>. (updated every hour)
 This will pay for the project's one paid developer (we have many volunteers) and
 the server for roughly another <strong>MONEYMONTHS months</strong> (MONEYDAYS days).</p>
 <h4>Why does The Freenet Project need donations?</h4>
@@ -280,8 +280,9 @@ Alternatively you can make a one-time donation.</li>
 </div>
 <ul>
 <li>
-<p><img alt="" src="assets/img/BC_nBG_48px.png" /> You can now donate to the Freenet Project using <a href="http://www.bitcoin.org/">Bitcoin</a>.<br />
-Send your donations to the account: 1966U1pjj15tLxPXZ19U48c99EJDkdXeqb</p>
+<p><img alt="" src="assets/img/BC_nBG_48px.png" />
+You can donate using <a href="http://www.bitcoin.org/">Bitcoin</a>.
+Send your donations to <strong>1966U1pjj15tLxPXZ19U48c99EJDkdXeqb</strong>.</p>
 </li>
 <li>
 <p>Alternatively, please contact us: <span class="e-mail" data-user="etanod" data-website="gro.tcejorpteneerf"></span> if you cannot use any of these payment methods.</p>
@@ -393,7 +394,87 @@ The Sports Den has a wide variety of outdoor sports equipment, they are based in
 <script src="assets/js/custom.js"></script>
 <!-- SLICK CAROUSEL -->
 <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+<!-- BOOTBOX -->
+<script type="text/javascript" src="assets/js/bootbox.min.js"></script>
 
+<!-- Chat link modal alert handler. This must go after jQuery is loaded, which restricts it to being in common. -->
+<script type="text/javascript">
+jQuery('#chatlink').click(function(e) {
+    bootbox.dialog({
+        message: "This chat is staffed by volunteers, and it may be that no one is around right now. Please ask your question, and someone will answer within several hours.",
+        title: "Please note",
+        buttons: {
+            main: {
+                label: "Open chat",
+                className: "btn-primary",
+                callback: function() {
+                    window.open("https://webchat.freenode.net/?randomnick=1&channels=freenet");
+                }
+            }
+        }
+    });
+});
+</script>
+
+<!-- Update the body padding to always match the height of the top navigation bar. -->
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var menu = jQuery('#menu-section');
+    // Calculate the vertical margin/border around the static navbar (assume it is bottom-only)
+    var margin = menu.outerHeight(true) - menu.innerHeight();
+    // Add the appropriate class and remove the fallback
+    menu.addClass('navbar-fixed-top');
+    menu.removeClass('navbar-static-top');
+    var offset = 0;
+    // Handler to account for the new navigation bar height if it changes due to wrapping
+    var onResize = function() {
+        var newOffset = menu.height() + margin;
+        if (newOffset != offset) {
+            offset = newOffset;
+            // Update body padding to match new navigation bar height
+            var body = jQuery('body');
+            body.css('padding-top', offset);
+            // Notify the Bootstrap Scrollspy of the new offset
+            body.attr('data-offset', offset);
+            var scrollspy = body.data('bs.scrollspy');
+            if (scrollspy) {
+                scrollspy.options.offset = offset;
+                scrollspy.refresh();
+            }
+        }
+    };
+    // Scroll to a hash on this page, correcting for navigation bar height
+    var scrollToHash = function(href) {
+        if (typeof(href) != 'string') {
+            href = jQuery(this).attr('href');
+        }
+        if (href.indexOf("#") == 0) {
+            // The url passed is a hash on this page
+            var target = jQuery(href);
+            if (target.length) {
+                // The target anchor exists, scroll to the right position
+                jQuery('html, body').scrollTop(target.offset().top - offset);
+                if (history && 'pushState' in history) {
+                    history.pushState({}, document.title, window.location.pathname + href);
+                    return false;
+                }
+            }
+        }
+    };
+    var onHashChange = function() {
+        scrollToHash(window.location.hash)
+    }
+    onResize();
+    // Some browsers handle the hash before, some after .ready().
+    // As a workaround, update the scroll position right now, as well as
+    // immediately after the browser is done processing.
+    onHashChange();
+    window.setTimeout(onHashChange, 0);
+    jQuery(window).resize(onResize);
+    jQuery(window).on('hashchange', onHashChange);
+    jQuery('body').on('click', 'a', scrollToHash);
+})
+</script>
 </body>
 
 </html>

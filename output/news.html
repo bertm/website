@@ -43,7 +43,7 @@
 <!-- FONT AWESOME ICONS STYLES -->
 <link href="assets/css/font-awesome.css" rel="stylesheet" />
 <!-- CUSTOM CSS -->
-<link href="assets/css/style-freenet-4.css" rel="stylesheet" />
+<link href="assets/css/style-freenet-7.css" rel="stylesheet" />
 <!-- SLICK CAROUSEL -->
 <!-- Kept in one directory instead of split to stay with upstream. -->
 <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
@@ -62,7 +62,7 @@
 
 
 <!--MENU SECTION START-->
-<div class="navbar navbar-inverse navbar-fixed-top" id="menu-section" >
+<div class="navbar navbar-inverse navbar-static-top" id="menu-section">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -74,7 +74,7 @@
             <div class="navbar-brand">
                 <a href="index.html">
                     <img src="assets/img/logo_65_49.png" style="height: 2em;" alt="Freenet rabbit logo"/>
-                    FREENET
+                    <span class="uppercase">Freenet</span>
                 </a>
             </div>
         </div>
@@ -82,13 +82,13 @@
         <!-- languages -->
         <div class="navbar-collapse collapse navbar-language">
             <ul class="nav navbar-nav navbar-nav-language navbar-right">
-                <li><a href="?language=en">EN</a></li><li><a href="?language=es">ES</a></li><li><a href="?language=fi">FI</a></li><li><a href="?language=fr">FR</a></li><li><a href="?language=hr">HR</a></li><li><a href="?language=it">IT</a></li><li><a href="?language=ja">JA</a></li><li><a href="?language=nl">NL</a></li><li><a href="?language=pt-br">PT-BR</a></li><li><a href="?language=ru">RU</a></li><li><a href="?language=zh-cn">ZH-CN</a></li>
+                <li><a href="?language=en" class="uppercase">en</a></li><li><a href="?language=es" class="uppercase">es</a></li><li><a href="?language=fi" class="uppercase">fi</a></li><li><a href="?language=fr" class="uppercase">fr</a></li><li><a href="?language=hr" class="uppercase">hr</a></li><li><a href="?language=it" class="uppercase">it</a></li><li><a href="?language=ja" class="uppercase">ja</a></li><li><a href="?language=nl" class="uppercase">nl</a></li><li><a href="?language=pt-br" class="uppercase">pt-br</a></li><li><a href="?language=ru" class="uppercase">ru</a></li><li><a href="?language=zh-cn" class="uppercase">zh-cn</a></li>
             </ul>
         </div>
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-nav-page navbar-right">
-                <li><a href="index.html#home">OVERVIEW</a></li><li><a href="download.html#note">DOWNLOAD</a></li><li><a href="about.html#">ABOUT</a></li><li><a href="#news">NEWS</a></li><li><a href="documentation.html#documentation-intro">DOCUMENTATION</a></li><li><a href="help.html#">HELP</a></li><li><a href="donate.html#donate">DONATE</a></li><li><a href="contribute.html#">CONTRIBUTE</a></li>
+                <li><a href="index.html#home" class="uppercase">Overview</a></li><li><a href="download.html#note" class="uppercase">Download</a></li><li><a href="about.html#" class="uppercase">About</a></li><li><a href="#news" class="uppercase">News</a></li><li><a href="documentation.html#documentation-intro" class="uppercase">Documentation</a></li><li><a href="help.html#" class="uppercase">Help</a></li><li><a href="donate.html#donate" class="uppercase">Donate</a></li><li><a href="contribute.html#" class="uppercase">Contribute</a></li>
             </ul>
         </div>
 
@@ -170,11 +170,9 @@ development, and translations.</p>
         <p>In the next few weeks we will transition to a redesigned website. This will be
 the first major change since 2009. In addition to looking more modern, this new
 version is also more practical to modify, test, and translate.</p>
-<p>If you'd like to get a look at the site in testing you can find it <a href="https://testing.freenetproject.org/">here</a> - as given in the prompt the
-username and password are "guest". If you'd like to help with translation,
-please join us on the <a href="https://www.transifex.com/otf/freenet/website/">"website" resource on Transifex</a>.</p>
-<p>If you have any feedback on the new website design please let us know on <a href="irc.html">
-chat</a> or the <a href="https://emu.freenetproject.org/cgi-bin/mailman/listinfo/support">support list</a>!</p>
+<p>If you'd like to get a look at the site in testing you can find it <a href="https://testing.freenetproject.org/">here</a> - as given in the prompt the username and password are "guest".
+If you'd like to help with translation, please join us on the <a href="https://www.transifex.com/otf/freenet/website/">"website" resource on Transifex</a>.</p>
+<p>If you have any feedback on the new website design please let us know on <a href="irc.html">chat</a> or the <a href="https://emu.freenetproject.org/cgi-bin/mailman/listinfo/support">support list</a>!</p>
     </div>
 </div>
 <!-- text end -->
@@ -595,8 +593,7 @@ Freenet and its communication tools to provide a point of contact for users at r
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <p>The video from the talk given when Freenet <a href="#20150211">received the SUMA Award 2015</a>
 for being the best project against surveillance and espionage on the Internet
-is available on <a href="http://www.searchstudies.org/de/suma2015.html">the Award page</a>
-and <a href="https://youtu.be/dZpsBSPsHDI?t=5m56s">on YouTube</a>:</p>
+is available on <a href="http://www.searchstudies.org/de/suma2015.html">the Award page</a> and <a href="https://youtu.be/dZpsBSPsHDI?t=5m56s">on YouTube</a>:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dZpsBSPsHDI"
 style="border: none;" allowfullscreen=""></iframe>
 
@@ -989,7 +986,87 @@ Wolfgang Sander-Beuermann with Arne Babenhauserheide, long-term Freenet contribu
 <script src="assets/js/custom.js"></script>
 <!-- SLICK CAROUSEL -->
 <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+<!-- BOOTBOX -->
+<script type="text/javascript" src="assets/js/bootbox.min.js"></script>
 
+<!-- Chat link modal alert handler. This must go after jQuery is loaded, which restricts it to being in common. -->
+<script type="text/javascript">
+jQuery('#chatlink').click(function(e) {
+    bootbox.dialog({
+        message: "This chat is staffed by volunteers, and it may be that no one is around right now. Please ask your question, and someone will answer within several hours.",
+        title: "Please note",
+        buttons: {
+            main: {
+                label: "Open chat",
+                className: "btn-primary",
+                callback: function() {
+                    window.open("https://webchat.freenode.net/?randomnick=1&channels=freenet");
+                }
+            }
+        }
+    });
+});
+</script>
+
+<!-- Update the body padding to always match the height of the top navigation bar. -->
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var menu = jQuery('#menu-section');
+    // Calculate the vertical margin/border around the static navbar (assume it is bottom-only)
+    var margin = menu.outerHeight(true) - menu.innerHeight();
+    // Add the appropriate class and remove the fallback
+    menu.addClass('navbar-fixed-top');
+    menu.removeClass('navbar-static-top');
+    var offset = 0;
+    // Handler to account for the new navigation bar height if it changes due to wrapping
+    var onResize = function() {
+        var newOffset = menu.height() + margin;
+        if (newOffset != offset) {
+            offset = newOffset;
+            // Update body padding to match new navigation bar height
+            var body = jQuery('body');
+            body.css('padding-top', offset);
+            // Notify the Bootstrap Scrollspy of the new offset
+            body.attr('data-offset', offset);
+            var scrollspy = body.data('bs.scrollspy');
+            if (scrollspy) {
+                scrollspy.options.offset = offset;
+                scrollspy.refresh();
+            }
+        }
+    };
+    // Scroll to a hash on this page, correcting for navigation bar height
+    var scrollToHash = function(href) {
+        if (typeof(href) != 'string') {
+            href = jQuery(this).attr('href');
+        }
+        if (href.indexOf("#") == 0) {
+            // The url passed is a hash on this page
+            var target = jQuery(href);
+            if (target.length) {
+                // The target anchor exists, scroll to the right position
+                jQuery('html, body').scrollTop(target.offset().top - offset);
+                if (history && 'pushState' in history) {
+                    history.pushState({}, document.title, window.location.pathname + href);
+                    return false;
+                }
+            }
+        }
+    };
+    var onHashChange = function() {
+        scrollToHash(window.location.hash)
+    }
+    onResize();
+    // Some browsers handle the hash before, some after .ready().
+    // As a workaround, update the scroll position right now, as well as
+    // immediately after the browser is done processing.
+    onHashChange();
+    window.setTimeout(onHashChange, 0);
+    jQuery(window).resize(onResize);
+    jQuery(window).on('hashchange', onHashChange);
+    jQuery('body').on('click', 'a', scrollToHash);
+})
+</script>
 </body>
 
 </html>

@@ -43,7 +43,7 @@
 <!-- FONT AWESOME ICONS STYLES -->
 <link href="assets/css/font-awesome.css" rel="stylesheet" />
 <!-- CUSTOM CSS -->
-<link href="assets/css/style-freenet-4.css" rel="stylesheet" />
+<link href="assets/css/style-freenet-7.css" rel="stylesheet" />
 <!-- SLICK CAROUSEL -->
 <!-- Kept in one directory instead of split to stay with upstream. -->
 <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
@@ -62,7 +62,7 @@
 
 
 <!--MENU SECTION START-->
-<div class="navbar navbar-inverse navbar-fixed-top" id="menu-section" >
+<div class="navbar navbar-inverse navbar-static-top" id="menu-section">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -74,7 +74,7 @@
             <div class="navbar-brand">
                 <a href="index.html">
                     <img src="assets/img/logo_65_49.png" style="height: 2em;" alt="Freenet rabbit logo"/>
-                    FREENET
+                    <span class="uppercase">Freenet</span>
                 </a>
             </div>
         </div>
@@ -82,19 +82,19 @@
         <!-- languages -->
         <div class="navbar-collapse collapse navbar-language">
             <ul class="nav navbar-nav navbar-nav-language navbar-right">
-                <li><a href="?language=en">EN</a></li><li><a href="?language=es">ES</a></li><li><a href="?language=fi">FI</a></li><li><a href="?language=fr">FR</a></li><li><a href="?language=hr">HR</a></li><li><a href="?language=it">IT</a></li><li><a href="?language=ja">JA</a></li><li><a href="?language=nl">NL</a></li><li><a href="?language=pt-br">PT-BR</a></li><li><a href="?language=ru">RU</a></li><li><a href="?language=zh-cn">ZH-CN</a></li>
+                <li><a href="?language=en" class="uppercase">en</a></li><li><a href="?language=es" class="uppercase">es</a></li><li><a href="?language=fi" class="uppercase">fi</a></li><li><a href="?language=fr" class="uppercase">fr</a></li><li><a href="?language=hr" class="uppercase">hr</a></li><li><a href="?language=it" class="uppercase">it</a></li><li><a href="?language=ja" class="uppercase">ja</a></li><li><a href="?language=nl" class="uppercase">nl</a></li><li><a href="?language=pt-br" class="uppercase">pt-br</a></li><li><a href="?language=ru" class="uppercase">ru</a></li><li><a href="?language=zh-cn" class="uppercase">zh-cn</a></li>
             </ul>
         </div>
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-nav-page navbar-right">
-                <li><a href="#home">OVERVIEW</a></li><li><a href="download.html#note">DOWNLOAD</a></li><li><a href="about.html#">ABOUT</a></li><li><a href="news.html#news">NEWS</a></li><li><a href="documentation.html#documentation-intro">DOCUMENTATION</a></li><li><a href="help.html#">HELP</a></li><li><a href="donate.html#donate">DONATE</a></li><li><a href="contribute.html#">CONTRIBUTE</a></li>
+                <li><a href="#home" class="uppercase">Overview</a></li><li><a href="download.html#note" class="uppercase">Download</a></li><li><a href="about.html#" class="uppercase">About</a></li><li><a href="news.html#news" class="uppercase">News</a></li><li><a href="documentation.html#documentation-intro" class="uppercase">Documentation</a></li><li><a href="help.html#" class="uppercase">Help</a></li><li><a href="donate.html#donate" class="uppercase">Donate</a></li><li><a href="contribute.html#" class="uppercase">Contribute</a></li>
             </ul>
         </div>
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#services">WHAT IS FREENET?</a></li><li><a href="#news">LATEST NEWS</a></li><li><a href="#contact">CONTACT</a></li>
+                <li><a href="#services" class="uppercase">What is Freenet?</a></li><li><a href="#news" class="uppercase">Latest News</a></li><li><a href="#contact" class="uppercase">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -104,13 +104,33 @@
 <!--HOME SECTION START-->
 <section id="home">
     <div class="container">
+        <div class="row">
+            <!--DONATE SUBSECTION -->
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="item active donate" id="donate_button">
+                     <p>We are raising funds so we can continue paying our developer for another year.</p>
+                     <div class="meter blue" id="donate_bar_small">
+                         <div class="quantity" style="left: 15px;">$MONEYBALANCE</div>
+                         <div class="quantity" style="right: 15px;">$27500</div>
+                         <span style="width: calc(MONEYBALANCE / 27500 * 100%)">
+                         </span>
+                     </div>
+                     <script type="text/javascript">
+                         fund_percentage = (MONEYBALANCE / 27500);
+                         if(fund_percentage <= 1/3) {
+                             donate_bar = document.getElementById("donate_bar_small");
+                             donate_bar.className = "meter red";
+                         }
+                     </script>
+                     <p><i>The Freenet Project Inc is a non-profit 501(c)(3) corporation.</i></p>
+                     <a class="btn button-custom btn-custom-two donate-button" href="donate.html">Donate!</a>
+                </div>
+            </div>
+            <!-- DONATE SUBSECTION END -->
+        </div>
         <div class="row text-center">
             <div class="col-sm-2 col-md-2 col-lg-2">
-                <div class="item active" id="suma_award_notice">
-                    <h4>&nbsp; &nbsp;</h4>
-                    <p>&nbsp; &nbsp;</p>
-                    <p>&nbsp; &nbsp;</p>
-                    <p>&nbsp; &nbsp;</p>
+                <div class="item active sidebar" id="suma_award_notice">
                     <p><a href="news.html#20150211"><img src="assets/img/suma2015_badge_transparent_3.png" alt="SUMA Award 2014/15" /></a></p>
                 </div>
             </div>
@@ -180,38 +200,6 @@ obtain. Using it will also be less suspicious.</p>
                     </div>
                 </div>
             </div>
-
-            <!--DONATE SUBSECTION -->
-            <div class="col-sm-2 col-md-2 col-lg-2">
-                <div class="item active donate" id="donate_button">
-                    <h4>Please Donate</h4>
-                    <p>Your donations pay for our server and developer. Our current funds will last</p>
-                    
-                    <div class="meter blue" id="donate_bar_small">
-                        <span style="width: calc(MONEYMONTHS / 12 *100%)"></span>
-
-                        <!-- div to precisely float over and cover the whole bar box so we can center the text in it -->
-                        <div style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; display:table;">
-                            <!-- div to center vertically -->
-                            <div style="display: table-cell; vertical-align: middle;">
-                                <!-- div to set font properties (text-shadow creates a black outline, aka stroke) -->
-                                <div style="font-size: small; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
-                                    MONEYMONTHS months
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <script type="text/javascript">
-                        fund_percentage_year = (MONEYMONTHS / 12);
-                        if(fund_percentage_year <= 1/3) {
-                            donate_bar = document.getElementById("donate_bar_small");
-                            donate_bar.className = "meter red";
-                        }
-                    </script>
-                    <a class="btn button-custom btn-custom-two donate-button" href="donate.html">Donate!</a>
-                </div>
-            </div>
-            <!-- DONATE SUBSECTION END -->
         </div>
     </div>
 </section>
@@ -423,7 +411,87 @@ obtain. Using it will also be less suspicious.</p>
 <script src="assets/js/custom.js"></script>
 <!-- SLICK CAROUSEL -->
 <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+<!-- BOOTBOX -->
+<script type="text/javascript" src="assets/js/bootbox.min.js"></script>
 
+<!-- Chat link modal alert handler. This must go after jQuery is loaded, which restricts it to being in common. -->
+<script type="text/javascript">
+jQuery('#chatlink').click(function(e) {
+    bootbox.dialog({
+        message: "This chat is staffed by volunteers, and it may be that no one is around right now. Please ask your question, and someone will answer within several hours.",
+        title: "Please note",
+        buttons: {
+            main: {
+                label: "Open chat",
+                className: "btn-primary",
+                callback: function() {
+                    window.open("https://webchat.freenode.net/?randomnick=1&channels=freenet");
+                }
+            }
+        }
+    });
+});
+</script>
+
+<!-- Update the body padding to always match the height of the top navigation bar. -->
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var menu = jQuery('#menu-section');
+    // Calculate the vertical margin/border around the static navbar (assume it is bottom-only)
+    var margin = menu.outerHeight(true) - menu.innerHeight();
+    // Add the appropriate class and remove the fallback
+    menu.addClass('navbar-fixed-top');
+    menu.removeClass('navbar-static-top');
+    var offset = 0;
+    // Handler to account for the new navigation bar height if it changes due to wrapping
+    var onResize = function() {
+        var newOffset = menu.height() + margin;
+        if (newOffset != offset) {
+            offset = newOffset;
+            // Update body padding to match new navigation bar height
+            var body = jQuery('body');
+            body.css('padding-top', offset);
+            // Notify the Bootstrap Scrollspy of the new offset
+            body.attr('data-offset', offset);
+            var scrollspy = body.data('bs.scrollspy');
+            if (scrollspy) {
+                scrollspy.options.offset = offset;
+                scrollspy.refresh();
+            }
+        }
+    };
+    // Scroll to a hash on this page, correcting for navigation bar height
+    var scrollToHash = function(href) {
+        if (typeof(href) != 'string') {
+            href = jQuery(this).attr('href');
+        }
+        if (href.indexOf("#") == 0) {
+            // The url passed is a hash on this page
+            var target = jQuery(href);
+            if (target.length) {
+                // The target anchor exists, scroll to the right position
+                jQuery('html, body').scrollTop(target.offset().top - offset);
+                if (history && 'pushState' in history) {
+                    history.pushState({}, document.title, window.location.pathname + href);
+                    return false;
+                }
+            }
+        }
+    };
+    var onHashChange = function() {
+        scrollToHash(window.location.hash)
+    }
+    onResize();
+    // Some browsers handle the hash before, some after .ready().
+    // As a workaround, update the scroll position right now, as well as
+    // immediately after the browser is done processing.
+    onHashChange();
+    window.setTimeout(onHashChange, 0);
+    jQuery(window).resize(onResize);
+    jQuery(window).on('hashchange', onHashChange);
+    jQuery('body').on('click', 'a', scrollToHash);
+})
+</script>
 </body>
 
 </html>
