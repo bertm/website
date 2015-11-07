@@ -453,10 +453,6 @@ jQuery('#chatlink').click(function(e) {
     window.setTimeout(function() {
         console.log("replacing");
         history.replaceState({}, document.title, window.location.pathname + hash);
-    }, 1000);
-    window.setTimeout(function() {
-        console.log("scrolltop");
-        window.scrollTo(0, 0);
         console.log("scrollhash");
         scrollToHash(hash, false);
         jQuery(window).on('hashchange', onHashChange);
