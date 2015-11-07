@@ -193,10 +193,6 @@ jQuery('#chatlink').click(function(e) {
     };
     // Scroll to a hash on this page, correcting for navigation bar height
     var scrollToHash = function(href, push) {
-        console.log("scrollToHash invoked");
-        if (typeof(href) != 'string') {
-            href = jQuery(this).attr('href');
-        }
         if (href.indexOf("#") == 0) {
             // The url passed is a hash on this page
             var target = jQuery(href);
@@ -210,23 +206,22 @@ jQuery('#chatlink').click(function(e) {
             }
         }
     };
+    var onClick = function() {
+        return scrollToHash(jQuery(this).attr('href'), true);
+    };
     var onHashChange = function() {
-        console.log("onhashchange");
         return scrollToHash(window.location.hash, true);
     }
     onResize();
     var hash = window.location.hash;
-    console.log("unseting hash");
     window.location.hash = "";
     window.setTimeout(function() {
-        console.log("replacing");
         history.replaceState({}, document.title, window.location.pathname + hash);
-        console.log("scrollhash");
         scrollToHash(hash, false);
         jQuery(window).on('hashchange', onHashChange);
-    }, 2000);
+    }, 0);
     jQuery(window).resize(onResize);
-    jQuery('body').on('click', 'a', scrollToHash);
+    jQuery('body').on('click', 'a', onClick);
 })()
 </script>
 </body>
