@@ -94,11 +94,12 @@ h4 {
     text-transform: uppercase;
 }
 
-.prevent-scroll:before {
-   content: "";
+.prevent-scroll {
+   content: " ";
    display: block;
-   height: 9999px;
-   margin: -9999px 0 0;
+   height: 200px;
+   margin-top: -200px;
+   visibility: hidden;
 }
 
 /* =============================================================
