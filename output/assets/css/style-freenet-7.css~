@@ -94,7 +94,7 @@ h4 {
     text-transform: uppercase;
 }
 
-.prevent-scroll:before {
+.prevent-scroll {
    content: " ";
    display: block;
    height: 200px;
