@@ -472,24 +472,24 @@ jQuery('#chatlink').click(function(e) {
                 // The target anchor exists, scroll to the right position
                 jQuery('html, body').scrollTop(target.offset().top - offset);
                 if (window.location.hash != href && history && 'pushState' in history) {
-                    //history.pushState({}, document.title, window.location.pathname + href);
+                    history.pushState({}, document.title, window.location.pathname + href);
                 }
                 return false;
             }
         }
     };
     var onHashChange = function() {
-        scrollToHash(window.location.hash)
+        return scrollToHash(window.location.hash);
     }
     onResize();
-    // Some browsers handle the hash before, some after reading past here.
-    // As a workaround, update the scroll position right now, as well as
-    // immediately after the browser is done processing.
-    var hash = window.location.hash;
-    window.location.hash = "";
-    window.setTimeout(function() {
-        window.location.hash = hash;
-    }, 0);
+    var target = jQuery(window.location.hash);
+    if (target.length) {
+        target.addClass('prevent-scroll');
+        window.setTimeout(function() {
+            target.removeClass('prevent-scroll');
+            onHashChange();
+        }, 0);
+    }
     jQuery(window).resize(onResize);
     jQuery(window).on('hashchange', onHashChange);
     jQuery('body').on('click', 'a', scrollToHash);

@@ -94,6 +94,13 @@ h4 {
     text-transform: uppercase;
 }
 
+.prevent-scroll:before {
+   content: "";
+   display: block;
+   height: 9999px;
+   margin: -9999px 0 0;
+}
+
 /* =============================================================
 OVERRIDE GLOBAL COLOR FOR MODAL DIALOG
 ============================================================ */
